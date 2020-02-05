@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import batches
 
 # Create your views here.
 
@@ -16,3 +17,8 @@ def course(request):
 
 def explore(request):
     return render(request, 'explore.html')
+
+def zm_branch(request):
+
+    batches1 = batches.objects.all()
+    return render(request, 'zm_branch.html',{'batches1': batches1})

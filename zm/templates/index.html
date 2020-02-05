@@ -10,7 +10,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <script type="text/javascript" src="{% static 'javascript/javascript.js' %}"></script>
-  <style>
+  <!-- <style>
     body,
     html {
       height: 100%;
@@ -27,7 +27,7 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-  </style>
+  </style> -->
 
 
   <title>zm_technology</title>
@@ -87,82 +87,85 @@
 
 
 
+
+
   {% block content %}
+
   {% endblock %}
 
   <br>
   <div style="background-color:black;color:white;">
-  <div class="container-fluid hidden-lg hidden-md" id="footer">
-    
-    <h3 class="text-center">THANKS FOR VISITING US</h3><br>
-    <div class="row" style="margin-left: auto; margin-right: auto;">
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <ul>
-          <h5><strong>Training Programs</strong></h5>
-          <li><a href="" target="_blank">Hardware & Networking</a></li>
-          <li><a href="" target="_blank">Animation Programs</a></li>
-          <li><a href="" target="_blank">Software Engineering</a></li>
-          <li><a href="" target="_blank">Short term</a></li>
-          
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <ul>
-          <h5><strong>Personality Development</strong></h5>
-          <li><a href="" target="_blank">Interview Cracking tips</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#hiringModal">English Speaking</a></li>
-          
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <ul>
-          <h5><strong>Zm Technologies</strong></h5>
-          <li><a href="" target="_blank">About us</a></li>
-          
-          <li><a href="" target="_blank">Training Feedbacks</a></li>
-          <li><a href="" target="_blank">Our Mentors</a></li>
-          
-          <li><a href="" target="_blank">Technical Blog</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <ul>
-          <h5><strong>Get In Touch</strong></h5>
-          <li><a href="#" data-toggle="modal" data-target="#addressModal">ZM Branch</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact us</a><br>
-          </li>
-          <li><a href="" target="_blank">Facebook</a></li>
-          
-        </ul>
-      </div>
-    
-    
+    <div class="container-fluid hidden-lg hidden-md" id="footer">
 
-    
-    <div class="row">
-      
-      <div class="social-links">
-        <h4 class="text-center">Connect With Us</h4>
-        <a class="facebook" href="" target="_blank"></a>
-        <a class="linkedin" href="" target="_blank"></a>
-        <a class="youtube" href="" target="_blank"></a>
-      </div>
-    
-    </div> <!-- end of row -->
-    
-  </div>
-  </div>
+      <h3 class="text-center">THANKS FOR VISITING US</h3><br>
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <ul>
+            <h5><strong>Training Programs</strong></h5>
+            <li><a href="" target="_blank">Hardware & Networking</a></li>
+            <li><a href="" target="_blank">Animation Programs</a></li>
+            <li><a href="" target="_blank">Software Engineering</a></li>
+            <li><a href="" target="_blank">Short term</a></li>
 
-  <!-- <span class="sr-only">(current)</span> -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <ul>
+            <h5><strong>Personality Development</strong></h5>
+            <li><a href="" target="_blank">Interview Cracking tips</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#hiringModal">English Speaking</a></li>
+
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+          <ul>
+            <h5><strong>Zm Technologies</strong></h5>
+            <li><a href="" target="_blank">About us</a></li>
+
+            <li><a href="" target="_blank">Training Feedbacks</a></li>
+            <li><a href="" target="_blank">Our Mentors</a></li>
+
+            <li><a href="" target="_blank">Technical Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <ul>
+            <h5><strong>Get In Touch</strong></h5>
+            <li><a href="{% url 'zm_branch' %}">ZM Branch</a></li>
+            <li><a href="{% url 'contactus' %}">Contact us</a><br>
+            </li>
+            <li><a href="" target="_blank">Facebook</a></li>
+
+          </ul>
+        </div>
+
+
+
+
+        <div class="row">
+
+          <div class="social-links">
+            <h4 class="text-center">Connect With Us</h4>
+            <a class="facebook" href="" target="_blank"></a>
+            <a class="linkedin" href="" target="_blank"></a>
+            <a class="youtube" href="" target="_blank"></a>
+          </div>
+
+        </div> <!-- end of row -->
+
+      </div>
+    </div>
+
+    <!-- <span class="sr-only">(current)</span> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

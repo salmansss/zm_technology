@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<h4>ZM_Batches of Febuary</h4>
+<div class="container">
+    <h2> Table Time for Monday to Saturday</h2>
+    <p>Duration of Time Table of month</p>            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Start Day</th>
+          <th>End Day</th>
+          <th>Timing(daily)</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        {% for batches1 in batches1 %}
+        
+        <tr>
+          <td>{{batches1.subject}}</td>
+          <td>{{batches1.start_day}}</td>
+          <td>{{batches1.end_day}}</td>
+          <td>{{batches1.timing}}</td>
+          <td>{{batches1.duration}}</td>
+        </tr>
+        {% endfor %}
+        
+      </tbody>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;
+  
+
+{% endblock %}
