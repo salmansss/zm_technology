@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script type="text/javascript" src="{% static 'javascript/javascript.js' %}"></script>
+  <style>
+    body,
+    html {
+      height: 100%;
+     
+      margin: 0;
+    }
+
+    .bg {
+      background-image: url('{% static 'image/zm.jpg' %}');
+      height: 100%;
+      
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+
+  <title>zm_technology</title>
+
+</head>
+
+
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'image/zm.jpg' %}" width="150" height="40" alt="">
+          </a>
+        </li>
+        <div style="font-family: Monotype Corsiva;">
+          <p>
+            <h6>Zm Mansoori Technologies</h6>
+          </p>
+        </div>&nbsp;
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">
+            <h5>Home </h5>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'contactus' %}">
+            <h5>Contact Us</h5>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'course' %}">
+            <h5>Courses</h5>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'explore' %}">
+            <h5>Explores With us </h5>
+          </a>
+        </li>
+
+
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+
+  {% block content %}
+  {% endblock %}
+
+  <br>
+  <div style="background-color:black;color:white;">
+  <div class="container-fluid hidden-lg hidden-md" id="footer">
+    
+    <h3 class="text-center">THANKS FOR VISITING US</h3><br>
+    <div class="row" style="margin-left: auto; margin-right: auto;">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <ul>
+          <h5><strong>Training Programs</strong></h5>
+          <li><a href="" target="_blank">Hardware & Networking</a></li>
+          <li><a href="" target="_blank">Animation Programs</a></li>
+          <li><a href="" target="_blank">Software Engineering</a></li>
+          <li><a href="" target="_blank">Short term</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <ul>
+          <h5><strong>Personality Development</strong></h5>
+          <li><a href="" target="_blank">Interview Cracking tips</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#hiringModal">English Speaking</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <ul>
+          <h5><strong>Zm Technologies</strong></h5>
+          <li><a href="" target="_blank">About us</a></li>
+          
+          <li><a href="" target="_blank">Training Feedbacks</a></li>
+          <li><a href="" target="_blank">Our Mentors</a></li>
+          
+          <li><a href="" target="_blank">Technical Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <ul>
+          <h5><strong>Get In Touch</strong></h5>
+          <li><a href="#" data-toggle="modal" data-target="#addressModal">ZM Branch</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact us</a><br>
+          </li>
+          <li><a href="" target="_blank">Facebook</a></li>
+          
+        </ul>
+      </div>
+    
+    
+
+    
+    <div class="row">
+      
+      <div class="social-links">
+        <h4 class="text-center">Connect With Us</h4>
+        <a class="facebook" href="" target="_blank"></a>
+        <a class="linkedin" href="" target="_blank"></a>
+        <a class="youtube" href="" target="_blank"></a>
+      </div>
+    
+    </div> <!-- end of row -->
+    
+  </div>
+  </div>
+
+  <!-- <span class="sr-only">(current)</span> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
