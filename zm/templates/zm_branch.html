@@ -22,12 +22,15 @@
         {% for batches1 in batches1 %}
         
         <tr>
+          {% if batches1.true == 0 %}
           <td>{{batches1.subject}}</td>
           <td>{{batches1.start_day}}</td>
           <td>{{batches1.end_day}}</td>
           <td>{{batches1.timing}}</td>
           <td>{{batches1.duration}}</td>
+          {% endif %}
         </tr>
+        
         {% endfor %}
         
       </tbody>
